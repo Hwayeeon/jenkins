@@ -1,19 +1,37 @@
 {
   "HomePage": {
     "title": "Davidson Rafael",
-    "description": "Saya seorang insinyur perangkat lunak yang membangun <link>davidsonrafael.online</link> untuk membuat alat dan situs web bagi UMKM di Indonesia.",
+    "description": "Mahasiswa Teknik Informatika di UKRIDA yang selalu <link>bersemangat mempelajari hal baru</link> dan mengubah ide menjadi kode.",
     "projects": "Proyek",
-    "contact": "Kontak"
+    "contact": "Kontak",
+    "about": "Tentang"
   },
   "ContactPage": {
-    "twitter": "Twitter",
-    "email": "Surel",
-    "github": "Github"
+    "instagram": "Ikuti saya di Instagram",
+    "email": "Kirim email ke saya",
+    "github": "Lihat kode saya"
   },
   "ProjectsPage": {
     "title": "Proyek",
-    "description": "Beberapa proyek berasal dari pekerjaan dan beberapa proyek dikerjakan di waktu luang saya.",
+    "description": "Beberapa proyek berasal dari tugas kuliah dan beberapa merupakan eksplorasi pribadi.",
     "readMore": "Selengkapnya",
     "soon": "SEGERA"
+  },
+  "AboutPage": {
+    "title": "Tentang Saya",
+    "intro": "Hai, saya",
+    "name": "Davidson Rafael Krisman Nugroho",
+    "role": "Mahasiswa Teknik Informatika",
+    "university": "Universitas Kristen Krida Wacana (UKRIDA)",
+    "semester": "Semester 4",
+    "bio": "Saya adalah seorang pembelajar yang antusias dan percaya bahwa setiap baris kode adalah kesempatan untuk menciptakan sesuatu yang bermakna. Saat ini sedang menjelajahi dunia pengembangan perangkat lunak yang luas, dari membangun aplikasi web modern hingga mendalami pemrograman sistem.",
+    "techStackTitle": "Tech Stack",
+    "philosophyTitle": "Filosofi Saya",
+    "philosophy": "Tetap penasaran. Terus belajar. Bangun hal-hal yang berarti."
+  },
+  "Navigation": {
+    "projects": "Proyek",
+    "contact": "Kontak",
+    "about": "Tentang"
   }
 }

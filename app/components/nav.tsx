@@ -2,10 +2,13 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslations, useLocale } from 'next-intl';
 
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
+	const t = useTranslations('Navigation');
+	const locale = useLocale();
 
 	useEffect(() => {
 		if (!ref.current) return;
@@ -16,6 +19,8 @@ export const Navigation: React.FC = () => {
 		observer.observe(ref.current);
 		return () => observer.disconnect();
 	}, []);
+
+	const otherLocale = locale === 'en' ? 'id' : 'en';
 
 	return (
 		<header ref={ref}>
@@ -29,16 +34,29 @@ export const Navigation: React.FC = () => {
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-8">
 						<Link
+							href="/about"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							{t('about')}
+						</Link>
+						<Link
 							href="/projects"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Projects
+							{t('projects')}
 						</Link>
 						<Link
 							href="/contact"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Contact
+							{t('contact')}
+						</Link>
+						{/* Language Switcher */}
+						<Link
+							href={`/${otherLocale}`}
+							className="duration-200 text-zinc-500 hover:text-zinc-100 uppercase text-sm font-medium border border-zinc-700 px-2 py-0.5 rounded"
+						>
+							{otherLocale.toUpperCase()}
 						</Link>
 					</div>
 

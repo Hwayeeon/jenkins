@@ -69,6 +69,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={[inter.variable, calSans.variable].join(" ")}>
       <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshag/coloured-icons@master/app/ci.min.css" />
         <Analytics />
       </head>
       <body

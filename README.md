@@ -1,33 +1,80 @@
 <div align="center">
-    <a href="https://chronark.com"><h1 align="center">chronark.com</h1></a>
+    <h1 align="center">Personal Portfolio</h1>
 
-My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Upstash](https://upstash.com?ref=chronark.com), [Contentlayer](https://www.contentlayer.dev/) and deployed to [Vercel](https://vercel.com/).
+A personal portfolio website built with [Next.js 16](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Upstash](https://upstash.com), and deployed to [Vercel](https://vercel.com/).
 
 </div>
 
 <br/>
 
+## Features
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/upstash/clone?demo-title=Next.js%20Portfolio%20with%20Pageview%20Counter&demo-description=Portfolio%20site%20with%20pageview%20counter%2C%20built%20with%20Next.js%2013%20App%20Router%2C%20Contentlayer%2C%20and%20Upstash%20Redis.&demo-url=https%3A%2F%2Fchronark.com%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F1DA8n5a6WaP9p1FXf9LmUY%2Fc6264fa2732355787bf657df92dda8a1%2FCleanShot_2023-04-17_at_14.17.37.png&project-name=Next.js%20Portfolio%20with%20Pageview%20Counter&repository-name=nextjs-portfolio-pageview-counter&repository-url=https%3A%2F%2Fgithub.com%2Fchronark%2Fchronark.com&from=templates&integration-ids=oac_V3R1GIpkoJorr6fqyiwdhl17)
+- ⚡ **Next.js 16** with App Router and React 19
+- 🌐 **Internationalization (i18n)** using [next-intl](https://next-intl-docs.vercel.app/) with English and Indonesian locales
+- 📝 **MDX Support** via [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote) for blog and project content
+- 🎨 **Syntax Highlighting** with [Shiki](https://shiki.matsu.io/) and [rehype-pretty-code](https://rehype-pretty-code.netlify.app/)
+- 📊 **Page View Counter** powered by [Upstash Redis](https://upstash.com)
+- 🎭 **Animations** using [Framer Motion](https://www.framer.com/motion/)
+- 💅 **Styling** with [Tailwind CSS](https://tailwindcss.com/)
 
 ## Running Locally
 
+Clone the repository:
 
 ```sh-session
-git clone https://github.com/chronark/chronark.com.git
+git clone <your-repo-url>
 cd chronark.com
 ```
 
+Create a `.env.local` file with the following environment variables:
 
-Create a `.env` file similar to [`.env.example`](https://github.com/chronark/chronark.com/blob/main/.env.example).
+```env
+# Get your free Redis database from https://console.upstash.com/
+UPSTASH_REDIS_REST_URL=your_upstash_redis_rest_url_here
+UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_rest_token_here
+```
 
 Then install dependencies and run the development server:
+
 ```sh-session
 pnpm install
 pnpm dev
 ```
 
+## Project Structure
 
-## Cloning / Forking
+```
+├── app/
+│   └── [locale]/          # Internationalized routes
+├── content/
+│   ├── en/                # English MDX content (blog posts, projects)
+│   └── id/                # Indonesian MDX content
+├── i18n/                  # i18n configuration
+├── messages/
+│   ├── en.json            # English translations
+│   └── id.json            # Indonesian translations
+├── lib/                   # Utility functions
+└── public/                # Static assets
+```
 
-Please remove all of my personal information (projects, images, etc.) before deploying your own version of this site.
+## Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Framework | Next.js 16 |
+| UI Library | React 19 |
+| Styling | Tailwind CSS |
+| i18n | next-intl |
+| MDX | next-mdx-remote |
+| Syntax Highlighting | Shiki + rehype-pretty-code |
+| Database | Upstash Redis |
+| Animations | Framer Motion |
+| Deployment | Vercel |
+
+## Credits
+
+Originally forked from [chronark/chronark.com](https://github.com/chronark/chronark.com).
+
+## License
+
+MIT License - See [LICENSE](./LICENSE) for details.

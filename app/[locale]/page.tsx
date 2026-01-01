@@ -7,6 +7,7 @@ export default async function Home() {
   const t = await getTranslations('HomePage');
   
   const navigation = [
+    { name: t('about'), href: "/about" },
     { name: t('projects'), href: "/projects" },
     { name: t('contact'), href: "/contact" },
   ];

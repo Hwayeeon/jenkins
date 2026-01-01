@@ -1,5 +1,5 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Mail, Instagram } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../../components/nav";
 import { Card } from "../../components/card";
@@ -10,22 +10,22 @@ export default function ContactPage() {
 	
 	const socials = [
 		{
-			icon: <Twitter size={20} />,
-			href: "https://twitter.com/chronark_",
-			label: t('twitter'),
-			handle: "@chronark_",
+			icon: <Instagram size={20} />,
+			href: "https://instagram.com/davidsonrafael_",
+			label: t('instagram'),
+			handle: "@davidsonrafael_",
 		},
 		{
 			icon: <Mail size={20} />,
-			href: "mailto:dev@chronark.com",
+			href: "mailto:davidsonrafael20@gmail.com",
 			label: t('email'),
-			handle: "dev@chronark.com",
+			handle: "davidsonrafael20@gmail.com",
 		},
 		{
 			icon: <Github size={20} />,
-			href: "https://github.com/chronark",
+			href: "https://github.com/Hwayeeon",
 			label: t('github'),
-			handle: "chronark",
+			handle: "Hwayeeon",
 		},
 	];
 
@@ -64,4 +64,3 @@ export default function ContactPage() {
 		</div>
 	);
 }
-

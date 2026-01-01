@@ -1,19 +1,37 @@
 {
   "HomePage": {
     "title": "Davidson Rafael",
-    "description": "I'm a software engineer building <link>davidsonrafael.online</link> to build tools and website for UMKM in Indonesia.",
+    "description": "A curious Informatics Engineering student at UKRIDA, always <link>eager to learn something new</link> and transform ideas into code.",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "about": "About"
   },
   "ContactPage": {
-    "twitter": "Twitter",
-    "email": "Email",
-    "github": "Github"
+    "instagram": "Follow me on Instagram",
+    "email": "Send me an email",
+    "github": "Check out my code"
   },
   "ProjectsPage": {
     "title": "Projects",
-    "description": "Some of the projects are from work and some are on my own time.",
+    "description": "Some of the projects are from coursework and some are personal explorations.",
     "readMore": "Read more",
     "soon": "SOON"
+  },
+  "AboutPage": {
+    "title": "About Me",
+    "intro": "Hi, I'm",
+    "name": "Davidson Rafael Krisman Nugroho",
+    "role": "Informatics Engineering Student",
+    "university": "Universitas Kristen Krida Wacana (UKRIDA)",
+    "semester": "4th Semester",
+    "bio": "I'm a passionate learner who believes that every line of code is an opportunity to create something meaningful. Currently exploring the vast world of software development, from building modern web applications to diving deep into systems programming.",
+    "techStackTitle": "Tech Stack",
+    "philosophyTitle": "My Philosophy",
+    "philosophy": "Stay curious. Keep learning. Build things that matter."
+  },
+  "Navigation": {
+    "projects": "Projects",
+    "contact": "Contact",
+    "about": "About"
   }
 }
