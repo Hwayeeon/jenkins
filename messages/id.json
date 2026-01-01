@@ -1,0 +1,19 @@
+{
+  "HomePage": {
+    "title": "Davidson Rafael",
+    "description": "Saya seorang insinyur perangkat lunak yang membangun <link>davidsonrafael.online</link> untuk membuat alat dan situs web bagi UMKM di Indonesia.",
+    "projects": "Proyek",
+    "contact": "Kontak"
+  },
+  "ContactPage": {
+    "twitter": "Twitter",
+    "email": "Surel",
+    "github": "Github"
+  },
+  "ProjectsPage": {
+    "title": "Proyek",
+    "description": "Beberapa proyek berasal dari pekerjaan dan beberapa proyek dikerjakan di waktu luang saya.",
+    "readMore": "Selengkapnya",
+    "soon": "SEGERA"
+  }
+}

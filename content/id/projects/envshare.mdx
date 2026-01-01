@@ -1,0 +1,115 @@
+---
+title: envshare.dev
+description: EnvShare adalah alat sederhana untuk berbagi variabel environment secara aman. Menggunakan AES-GCM untuk mengenkripsi data Anda sebelum mengirimnya ke server. Kunci enkripsi tidak pernah meninggalkan browser Anda.
+date: "2023-01-16"
+url: https://envshare.dev
+repository: chronark/envshare
+published: true
+---
+
+EnvShare adalah alat sederhana untuk berbagi variabel environment secara aman. Menggunakan
+**AES-GCM** untuk mengenkripsi data Anda sebelum mengirimnya ke server. Kunci enkripsi
+tidak pernah meninggalkan browser Anda.
+
+## Fitur
+
+- **Link yang Dapat Dibagikan:** Bagikan variabel environment Anda secara aman dengan mengirimkan
+  link
+- **Enkripsi End-to-End:** Enkripsi AES-GCM digunakan untuk mengenkripsi data Anda
+  sebelum mengirimnya ke server
+- **Batasi jumlah pembacaan:** Batasi berapa kali sebuah link dapat dibaca
+- **Auto Expire:** Secara otomatis kedaluwarsa link dan menghapus data setelah waktu tertentu
+
+
+
+![](https://github.com/chronark/envshare/raw/main/img/envshare.png)
+
+## Dibangun dengan
+
+- [Next.js](https://nextjs.org)
+- [tailwindcss](https://tailwindcss.com)
+- Di-deploy di [Vercel](https://vercel.com?utm_source=envshare)
+- Data disimpan di [Upstash](https://upstash.com?utm_source=envshare)
+
+## Deploy sendiri
+
+Instruksi lengkap dapat ditemukan [di sini](https://envshare.dev/deploy)
+
+Yang Anda butuhkan hanyalah database Redis di Upstash dan akun Vercel. Klik tombol
+di bawah untuk clone dan deploy:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=EnvShare&demo-description=Simple%20Next.js%20%2B%20Upstash%20app%20to%20share%20environment%20variables%20securely%20using%20AES-GCM%20encryption.&demo-url=https%3A%2F%2Fenvshare.dev%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F5SaFBHXp5FBFJbsTzVqIJ3%2Ff0f8382369b7642fd8103debb9025c11%2Fenvshare.png&project-name=EnvShare&repository-name=envshare&repository-url=https%3A%2F%2Fgithub.com%2Fchronark%2Fenvshare&from=templates&integration-ids=oac_V3R1GIpkoJorr6fqyiwdhl17)
+
+
+
+## Konfigurasi
+
+### Variabel Environment
+
+`ENABLE_VERCEL_ANALYTICS` Nilai truthy apa pun akan mengaktifkan Vercel Analytics. Ini dimatikan secara default
+
+## Kontribusi
+
+Repository ini menggunakan `pnpm` untuk mengelola dependensi. Instal menggunakan
+`npm install -g pnpm`
+
+Silakan jalankan `pnpm fmt` sebelum commit untuk memformat kode.
+
+## Dokumentasi
+
+Dokumentasi di README bersifat sementara dan akan dipindahkan ke website segera.
+
+### API
+
+#### Simpan secret
+
+**JANGAN PERNAH UPLOAD SECRET YANG TIDAK TERENKRIPSI.**
+
+Endpoint ini hanya dimaksudkan untuk menyimpan secret yang **sudah terenkripsi**. Secret yang
+terenkripsi disimpan dalam bentuk plain text.
+
+```sh-session
+$ curl -XPOST -s https://envshare.dev/api/v1/secret -d "already-encrypted-secret"
+```
+
+Anda dapat menambahkan header opsional untuk mengkonfigurasi ttl dan jumlah pembacaan.
+
+```sh-session
+$ curl -XPOST -s https://envshare.dev/api/v1/secret -d "already-encrypted-secret" -H "envshare-ttl: 3600" -H "envshare-reads: 10"
+```
+
+- Menghilangkan header `envshare-ttl` akan menetapkan default 30 hari. Nonaktifkan
+  ttl dengan menetapkannya ke 0. (`envshare-ttl: 0`)
+- Menghilangkan header `envshare-reads` akan menonaktifkannya dan memungkinkan pembacaan
+  untuk jumlah yang tidak terbatas.
+
+Endpoint ini mengembalikan respons JSON dengan id secret:
+
+```json
+{
+  "data": {
+    "id": "HdPbXgpvUvNk43oxSdK97u",
+    "ttl": 86400,
+    "reads": 2,
+    "expiresAt": "2023-01-19T20:47:28.383Z",
+    "url": "http://envshare.dev/api/v1/secret/HdPbXgpvUvNk43oxSdK97u"
+  }
+}
+```
+
+#### Ambil secret
+
+Anda membutuhkan id untuk mengambil secret. Id dikembalikan saat Anda menyimpan secret.
+
+```sh-session
+$ curl -s https://envshare.dev/api/v1/secret/HdPbXgpvUvNk43oxSdK97u
+```
+
+```json
+{
+  "data": {
+    "secret": "Hello",
+    "remainingReads": 1
+  }
+}
+```

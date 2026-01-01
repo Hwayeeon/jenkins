@@ -1,0 +1,36 @@
+---
+title: QStash
+description: QStash adalah layanan queue dan messaging serverless yang dikelola sepenuhnya, dirancang untuk era serverless.
+date: "2022-07-18"
+url: https://upstash.com/qstash
+published: true
+
+---
+
+QStash adalah solusi messaging dan scheduling berbasis HTTP untuk runtime serverless dan edge.
+
+- 100% serverless, tidak memerlukan koneksi stateful. Pesan di-push ke API Anda.
+- Jaminan pengiriman at-least-once ke API publik mana pun
+- Pubsub melalui topics
+- Penundaan pengiriman pesan
+- Deduplikasi pesan
+- Scheduling melalui CRON
+
+
+Secara formal, QStash adalah message queue dan task scheduler yang dirancang untuk runtime serverless. Secara informal, QStash adalah perekat untuk fungsi serverless Anda.
+
+Dulu ada persepsi serverless hanya bagus untuk tugas-tugas sederhana. Tidak lagi. Orang-orang membangun sistem yang powerful dengan stack serverless. Sistem yang powerful terdiri dari banyak komponen. Komunikasi antar komponen tersebut adalah masalah engineering yang besar. Sudah ada solusi hebat untuk masalah ini. Tapi kami pikir solusi yang ada tidak cocok untuk ruang serverless. Entah terlalu kompleks atau tidak dirancang untuk bekerja dengan runtime stateless. Jadi kami menginginkan solusi yang:
+
+- Bekerja di mana saja termasuk serverless dan edge.
+- Messaging as a service tanpa backend yang perlu dijalankan pengguna.
+- Ringan, mudah dipahami, tidak perlu belajar apa pun.
+- Harga scale to zero.
+
+Mari kita bicara tentang contoh dunia nyata. Kita punya aplikasi e-commerce dan kita ingin mengirim email informasi setelah setiap pembelian. Kita punya service (API route) untuk pembelian baru (newPurchase) dan service kedua untuk mengirim email dan notifikasi (sendEmail). Kita bisa memanggil service sendEmail dari service newPurchase. Tapi bagaimana jika panggilan gagal? Haruskah kita menunggu respons dan retry? Bagaimana jika terlalu banyak panggilan yang membanjiri service sendEmail dan service tidak merespons tepat waktu? Anda harus menangani semua kasus ini di service newPurchase Anda. Lebih lagi, ketika Anda mengubah kontrak service sendEmail; Anda juga harus memperbarui service newPurchase Anda.
+
+Jika Anda menggunakan QStash dalam contoh di atas, Anda cukup mengirim request ke QStash dari service newPurchase. QStash akan meng-queue request dan memanggil service sendEmail. Jika service tidak merespons, QStash akan retry dengan strategi backoff. Latensi service sendEmail tidak akan mempengaruhi service newPurchase, karena tidak akan menunggu respons dari service sendEmail. QStash memisahkan service newPurchase dan sendEmail. Anda dapat memperbarui kedua service secara independen selama Anda menjaga format pesan tetap kompatibel.
+
+Dengan QStash, Anda dapat menambahkan delay ke request. Kirim email 3 hari setelah pengiriman untuk mengingatkan pelanggan menambahkan review. Anda juga dapat menjadwalkan tugas. Anda dapat mengirim request dengan ekspresi CRON, sehingga akan dijalankan berulang kali.
+
+
+Untuk mempelajari lebih lanjut tentang QStash, kunjungi [upstash.com/qstash](upstash.com/qstash).

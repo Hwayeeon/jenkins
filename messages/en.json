@@ -1,0 +1,19 @@
+{
+  "HomePage": {
+    "title": "Davidson Rafael",
+    "description": "I'm a software engineer building <link>davidsonrafael.online</link> to build tools and website for UMKM in Indonesia.",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "ContactPage": {
+    "twitter": "Twitter",
+    "email": "Email",
+    "github": "Github"
+  },
+  "ProjectsPage": {
+    "title": "Projects",
+    "description": "Some of the projects are from work and some are on my own time.",
+    "readMore": "Read more",
+    "soon": "SOON"
+  }
+}

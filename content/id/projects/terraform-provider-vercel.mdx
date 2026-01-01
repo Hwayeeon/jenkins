@@ -1,0 +1,46 @@
+---
+title: Vercel Terraform Provider
+description: Terraform provider untuk Vercel. Sudah deprecated ketika Vercel meluncurkan provider resmi mereka.
+date: "2021-03-16"
+repository: chronark/terraform-provider-vercel
+url: https://registry.terraform.io/providers/chronark/vercel/latest
+published: true
+---
+
+
+
+Dulu ketika Vercel belum memiliki Terraform provider resmi, saya membuat satu. 
+Saya perlu mengelola proyek Vercel saya dan terutama menyinkronkan variabel environment dari berbagai cloud provider.
+Terraform sangat bagus untuk menyediakan beberapa database postgres di Digital Ocean, tetapi tidak ada cara untuk menyinkronkan kredensial dengan Vercel.
+
+```hcl
+terraform {
+  required_providers {
+    vercel = {
+      source  = "registry.terraform.io/chronark/vercel"
+      version = ">=0.10.3"
+    }
+  }
+}
+
+provider "vercel" {
+  token = "<YOUR_TOKEN>"
+}
+
+resource "vercel_project" "my_project" {
+  name = "project-via-terraform"
+  git_repository {
+    type = "github"
+    repo = "chronark/terraform-provider-vercel"
+  }
+}
+```
+
+Itu adalah proyek yang menyenangkan dan saya belajar banyak tentang Terraform dan API Vercel. 
+Ini memberi saya kesempatan untuk berkontribusi pada ekosistem Terraform dan apresiasi saya terhadap pekerjaan yang dilakukan tim Terraform sangat besar.
+
+Ada cukup banyak individu dan tim yang telah menggunakan provider ini dan saya senang ini berguna untuk Anda.
+
+Sekarang Vercel telah hadir, saya memutuskan untuk [men-deprecate](https://twitter.com/chronark_/status/1517759708983177218) ini pada 23 April 2022. 
+
+Silakan gunakan [provider resmi](https://registry.terraform.io/providers/vercel/vercel/latest) sebagai gantinya.

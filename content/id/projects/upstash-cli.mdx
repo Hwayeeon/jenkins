@@ -1,0 +1,115 @@
+---
+title: "@upstash/cli"
+description: CLI untuk menyediakan dan mengelola resource Upstash, termasuk database Redis dan Kafka.
+date: "2022-05-16"
+repository: upstash/cli
+published: true
+
+---
+
+
+Kelola resource Upstash di terminal atau CI Anda.
+
+![](https://raw.githubusercontent.com/upstash/cli/main/img/banner.svg)
+
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/upstash/cli)
+[![Downloads/week](https://img.shields.io/npm/dw/lstr.svg)](https://npmjs.org/package/@upstash/cli)
+
+# Instalasi
+
+## npm
+
+Anda dapat menginstal CLI Upstash langsung dari npm
+
+```bash
+npm i -g @upstash/cli
+```
+
+Akan ditambahkan sebagai `upstash` ke path sistem Anda.
+
+## Binary terkompilasi:
+
+`upstash` juga tersedia dari
+[halaman releases](https://github.com/upstash/upstash-cli/releases/latest) dikompilasi
+untuk windows, linux dan mac (baik intel maupun m1).
+
+# Penggunaan
+
+```bash
+> upstash
+
+  Usage:   upstash
+  Version: development
+
+  Description:
+
+    CLI resmi untuk produk Upstash
+
+  Options:
+
+    -h, --help               - Tampilkan bantuan ini.
+    -V, --version            - Tampilkan nomor versi program ini.
+    -c, --config   <string>  - Path ke file .upstash.json
+
+  Commands:
+
+    auth   - Login dan logout
+    redis  - Kelola instance database redis
+    kafka  - Kelola cluster dan topic kafka
+    team   - Kelola tim Anda dan anggotanya
+
+  Environment variables:
+
+    UPSTASH_EMAIL    <string>  - Email yang Anda gunakan di upstash
+    UPSTASH_API_KEY  <string>  - API key dari upstash
+```
+
+## Autentikasi
+
+Saat menjalankan `upstash` untuk pertama kali, Anda harus login menggunakan
+`upstash auth login`. Masukkan email dan api key Anda.
+[Lihat di sini untuk cara mendapatkan key.](https://docs.upstash.com/redis/howto/developerapi#api-development)
+
+Sebagai alternatif untuk login, Anda dapat menyediakan `UPSTASH_EMAIL` dan
+`UPSTASH_API_KEY` sebagai variabel environment.
+
+## Penggunaan
+
+Mari buat database redis baru:
+
+```bash
+> upstash redis create --name=my-db --region=eu-west-1
+  Database telah dibuat
+
+  database_id          a3e25299-132a-45b9-b026-c73f5a807859
+  database_name        my-db
+  database_type        Pay as You Go
+  region               eu-west-1
+  type                 paid
+  port                 37090
+  creation_time        1652687630
+  state                active
+  password             88ae6392a1084d1186a3da37fb5f5a30
+  user_email           andreas@upstash.com
+  endpoint             eu1-magnetic-lacewing-37090.upstash.io
+  edge                 false
+  multizone            false
+  rest_token           AZDiASQgYTNlMjUyOTktMTMyYS00NWI5LWIwMjYtYzczZjVhODA3ODU5ODhhZTYzOTJhMTA4NGQxMTg2YTNkYTM3ZmI1ZjVhMzA=
+  read_only_rest_token ApDiASQgYTNlMjUyOTktMTMyYS00NWI5LWIwMjYtYzczZjVhODA3ODU5O_InFjRVX1XHsaSjq1wSerFCugZ8t8O1aTfbF6Jhq1I=
+
+
+  Anda dapat mengunjungi halaman detail database Anda: https://console.upstash.com/redis/a3e25299-132a-45b9-b026-c73f5a807859
+
+  Koneksi ke database Anda dengan redis-cli: redis-cli -u redis://88ae6392a1084d1186a3da37fb5f5a30@eu1-magnetic-lacewing-37090.upstash.io:37090
+```
+
+## Output
+
+Sebagian besar perintah mendukung flag `--json` untuk mengembalikan respons api mentah sebagai json,
+yang dapat Anda parse dan otomatisasi sistem Anda.
+
+```bash
+> upstash  redis create --name=test2113 --region=us-central1 --json | jq '.endpoint'
+
+ "gusc1-clean-gelding-30208.upstash.io"
+```
