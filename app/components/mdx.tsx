@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { remarkCodeHike } from "../../lib/mdx";
 import rehypePrettyCode from "rehype-pretty-code";
+import remarkGfm from "remark-gfm";
 
 function clsx(...args: any[]) {
   return args.filter(Boolean).join(" ");
@@ -147,14 +148,21 @@ const components = {
     <hr className="my-4 border-zinc-200 md:my-8" {...props} />
   ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-    <div className="w-full my-6 overflow-y-auto">
-      <table className={clsx("w-full", className)} {...props} />
+    <div className="w-full my-6 overflow-x-auto">
+      <table className={clsx("w-full border-collapse border border-zinc-300 rounded-md", className)} {...props} />
     </div>
+  ),
+  thead: ({ className, ...props }: React.HTMLAttributes<HTMLTableSectionElement>) => (
+    <thead className={clsx("bg-zinc-50", className)} {...props} />
+  ),
+  tbody: ({ className, ...props }: React.HTMLAttributes<HTMLTableSectionElement>) => (
+    <tbody className={clsx("bg-white", className)} {...props} />
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr
       className={clsx(
-        "m-0 border-t border-zinc-300 p-0 even:bg-zinc-100",
+        "m-0 p-0 border-t border-zinc-300",
+        "even:bg-zinc-50",
         className
       )}
       {...props}
@@ -166,7 +174,8 @@ const components = {
   }: React.ThHTMLAttributes<HTMLTableCellElement>) => (
     <th
       className={clsx(
-        "border border-zinc-200 px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "px-4 py-3 text-left font-semibold text-zinc-900 border border-zinc-300",
+        "[&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...props}
@@ -178,7 +187,8 @@ const components = {
   }: React.TdHTMLAttributes<HTMLTableCellElement>) => (
     <td
       className={clsx(
-        "border border-zinc-200 px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        "px-4 py-3 text-left text-zinc-700 border border-zinc-300",
+        "[&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...props}
@@ -242,7 +252,7 @@ export function Mdx({ source }: MdxProps) {
         components={components} 
         options={{
           mdxOptions: {
-            remarkPlugins: [remarkCodeHike],
+            remarkPlugins: [remarkGfm, remarkCodeHike],
             rehypePlugins: [
               [
                 rehypePrettyCode,
