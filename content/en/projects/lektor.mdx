@@ -1,0 +1,100 @@
+---
+title: Lektor
+description: A web-based fundraising platform that digitizes food ordering, automates sales tracking via Google Sheets, and increases profits by 30%+ through improved conversion and operational efficiency.
+descriptionDev: Full-stack web application built with modern technologies, featuring real-time Google Sheets integration, responsive UI, and automated order management system.
+date: "2026-01-01"
+url: https://lektor.davidsonrafael.com
+published: true
+repository: Hwayeeon/lektor
+---
+
+## Business View
+
+### Project Overview
+Lektor is a web platform I built to digitize community fundraising by transforming manual ordering workflows into a seamless, automated online ordering ecosystem. The project is designed to help church communities and small-scale food sellers generate revenue more efficiently by connecting sellers directly with local visitors who can order online.
+
+### The Challenge
+Before Lektor, fundraising orders were handled manually — via phone or face-to-face — which caused:
+
+- Time-consuming and error-prone processes
+- Difficult to track or manage orders
+- Limited customer reach and visibility
+
+The core issue was _how to transform an offline, disorganized workflow into a trusted, scalable online experience without complex infrastructure_.
+
+### My Solution
+I designed and built a lightweight web ordering platform where:
+- Sellers upload _product listings_ with prices and images
+- Visitors can _browse and order instantly_ in an easy-to-use flow
+- Orders automatically sync to Google Sheets, collecting:
+  - Customer name
+  - Phone number
+  - Selected items
+  - Total sales
+
+This setup eliminates manual data entry while maintaining centralized, exportable data.
+
+### Impact & Results
+This project wasn't just a functional upgrade — it created measurable business value:
+
+- **Sales performance increased significantly**
+- Communities saw **revenue growth of up to 30%+** after implementing Lektor
+- Process efficiency improved with automated tracking and reduced errors
+
+Lektor proves how thoughtful web automation can transform local fundraising efforts into scalable revenue channels.
+
+---
+
+## Developer View
+
+### Technical Overview
+Lektor is a full-stack web application that demonstrates modern web development practices, integrating multiple technologies to create a complete e-commerce solution for fundraising.
+
+### Architecture & Tech Stack
+- **Frontend**: Next.js with React for server-side rendering and optimal performance
+- **Styling**: Tailwind CSS for responsive, mobile-first design
+- **Backend**: API routes for order processing and validation
+- **Database/Storage**: Google Sheets API integration for real-time data synchronization
+- **Deployment**: Vercel for automatic CI/CD and edge network distribution
+
+### Key Technical Challenges
+
+#### 1. Google Sheets Integration
+Implemented OAuth 2.0 authentication flow and Google Sheets API v4 to enable:
+- Real-time order synchronization without database infrastructure
+- Automatic data validation and formatting
+- Error handling for API rate limits and network failures
+
+#### 2. Order Management System
+Built a robust order processing pipeline:
+- Client-side form validation with Zod schemas
+- Server-side data sanitization and verification
+- Transaction-like behavior ensuring data consistency
+- Automatic timestamp and order ID generation
+
+#### 3. Performance Optimization
+- Image optimization using Next.js Image component
+- Lazy loading for product catalogs
+- Debounced search and filtering
+- Client-side caching for improved UX
+
+#### 4. Responsive Design
+Achieved mobile-first, fully responsive interface:
+- Breakpoint system for various screen sizes
+- Touch-optimized controls for mobile devices
+- Progressive enhancement strategy
+
+### Code Quality & Best Practices
+- TypeScript for type safety throughout the codebase
+- Component-based architecture for reusability
+- Custom hooks for shared logic
+- Environment variable management for configuration
+- Error boundaries for graceful failure handling
+
+### Scalability Considerations
+While Google Sheets serves as the data layer for MVP, the architecture is designed with modularity in mind:
+- Abstracted data access layer for easy migration to traditional databases
+- API-first design allowing future mobile app integration
+- Stateless server design for horizontal scaling
+
+This project showcases not just the ability to ship features, but to architect maintainable, scalable solutions while balancing technical constraints with business needs.

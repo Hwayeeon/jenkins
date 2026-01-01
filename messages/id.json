@@ -29,6 +29,29 @@
     "philosophyTitle": "Filosofi Saya",
     "philosophy": "Tetap penasaran. Terus belajar. Bangun hal-hal yang berarti."
   },
+  "PerspectiveToggle": {
+    "toggleLabel": "Ganti tampilan perspektif",
+    "businessView": "Tampilan Bisnis",
+    "developerView": "Tampilan Developer"
+  },
+  "PerspectiveTutorial": {
+    "welcomeTitle": "Selamat Datang! 👋",
+    "welcomeSubtitle": "Mari jelajahi fitur unik ini",
+    "step1Title": "Konten Dua Perspektif",
+    "step1Description": "Portfolio ini menampilkan proyek dari dua sudut pandang berbeda: Tampilan Bisnis (dampak & hasil) dan Tampilan Developer (implementasi teknis).",
+    "step2Title": "Toggle Perspektif",
+    "step2Description": "Tombol-tombol ini memungkinkan Anda beralih antara perspektif Bisnis dan Developer. Preferensi Anda disimpan otomatis!",
+    "step3Title": "Jelajahi Kedua Sisi",
+    "step3Description": "Baik Anda tertarik pada hasil bisnis atau detail teknis, Anda akan menemukan kedalaman yang Anda cari. Selamat menjelajah!",
+    "businessBtnTitle": "Tampilan Bisnis 💼",
+    "businessBtnDescription": "Klik di sini untuk melihat dampak bisnis: ROI, hasil, dan nilai yang diberikan kepada stakeholder.",
+    "developerBtnTitle": "Tampilan Developer 💻",
+    "developerBtnDescription": "Klik di sini untuk mendalami detail teknis: arsitektur, kode, dan tantangan implementasi.",
+    "lookForToggle": "Cari tombol toggle ini",
+    "skip": "Lewati",
+    "next": "Lanjut",
+    "gotIt": "Mengerti!"
+  },
   "Navigation": {
     "projects": "Proyek",
     "contact": "Kontak",

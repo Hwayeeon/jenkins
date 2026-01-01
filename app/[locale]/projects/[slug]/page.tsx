@@ -5,6 +5,10 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
+import { PerspectiveProvider } from "@/app/components/perspective-context";
+import { PerspectiveToggle } from "@/app/components/perspective-toggle";
+import { PerspectiveTutorial } from "@/app/components/perspective-tutorial";
+import { PerspectiveContent } from "@/app/components/perspective-content";
 
 // Make this page dynamic to avoid React 19 contentlayer compatibility issues during build
 export const dynamic = "force-dynamic";
@@ -52,14 +56,38 @@ export default async function PostPage({ params }: Props) {
     }
   }
 
-  return (
-    <div className="bg-zinc-50 min-h-screen">
-      <Header project={project} views={views} />
-      <ReportView slug={project.slug} />
+  // Pre-render both content variations on server side
+  const businessContent = project.contentBusiness ? (
+    <Mdx source={project.contentBusiness} />
+  ) : (
+    <Mdx source={project.content} />
+  );
 
-      <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
-        <Mdx source={project.content} />
-      </article>
-    </div>
+  const developerContent = project.contentDeveloper ? (
+    <Mdx source={project.contentDeveloper} />
+  ) : (
+    <Mdx source={project.content} />
+  );
+
+  return (
+    <PerspectiveProvider>
+      <div className="bg-zinc-50 min-h-screen">
+        <Header project={project} views={views} />
+        <ReportView slug={project.slug} />
+
+        {/* Perspective Toggle - Self-positioned at right-center */}
+        <PerspectiveToggle />
+
+        {/* Tutorial for first-time visitors */}
+        <PerspectiveTutorial />
+
+        <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
+          <PerspectiveContent
+            businessContent={businessContent}
+            developerContent={developerContent}
+          />
+        </article>
+      </div>
+    </PerspectiveProvider>
   );
 }

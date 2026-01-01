@@ -29,6 +29,29 @@
     "philosophyTitle": "My Philosophy",
     "philosophy": "Stay curious. Keep learning. Build things that matter."
   },
+  "PerspectiveToggle": {
+    "toggleLabel": "Toggle perspective view",
+    "businessView": "Business View",
+    "developerView": "Developer View"
+  },
+  "PerspectiveTutorial": {
+    "welcomeTitle": "Welcome! 👋",
+    "welcomeSubtitle": "Let's explore a unique feature",
+    "step1Title": "Dual Perspective Content",
+    "step1Description": "This portfolio showcases projects from two different angles: Business View (impact & results) and Developer View (technical implementation).",
+    "step2Title": "Perspective Toggle",
+    "step2Description": "These buttons let you switch between Business and Developer perspectives. Your preference is saved automatically!",
+    "step3Title": "Explore Both Sides",
+    "step3Description": "Whether you're interested in business outcomes or technical details, you'll find the depth you're looking for. Enjoy exploring!",
+    "businessBtnTitle": "Business View 💼",
+    "businessBtnDescription": "Click here to see the business impact: ROI, results, and value delivered to stakeholders.",
+    "developerBtnTitle": "Developer View 💻",
+    "developerBtnDescription": "Click here to dive into technical details: architecture, code, and implementation challenges.",
+    "lookForToggle": "Look for this toggle",
+    "skip": "Skip",
+    "next": "Next",
+    "gotIt": "Got it!"
+  },
   "Navigation": {
     "projects": "Projects",
     "contact": "Contact",
