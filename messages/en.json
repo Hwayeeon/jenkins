@@ -56,5 +56,20 @@
     "projects": "Projects",
     "contact": "Contact",
     "about": "About"
+  },
+  "NotFoundPage": {
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "← Back Home",
+    "viewProjects": "View Projects"
+  },
+  "ErrorPage": {
+    "title": "Oops!",
+    "description": "Something went wrong",
+    "errorId": "Error ID",
+    "tryAgain": "Try Again",
+    "goHome": "Go Home"
+  },
+  "LoadingPage": {
+    "loading": "Loading..."
   }
 }

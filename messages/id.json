@@ -56,5 +56,20 @@
     "projects": "Proyek",
     "contact": "Kontak",
     "about": "Tentang"
+  },
+  "NotFoundPage": {
+    "description": "Halaman yang Anda cari tidak ditemukan atau telah dipindahkan.",
+    "backHome": "← Kembali",
+    "viewProjects": "Lihat Proyek"
+  },
+  "ErrorPage": {
+    "title": "Oops!",
+    "description": "Terjadi kesalahan",
+    "errorId": "ID Error",
+    "tryAgain": "Coba Lagi",
+    "goHome": "Ke Beranda"
+  },
+  "LoadingPage": {
+    "loading": "Memuat..."
   }
 }
