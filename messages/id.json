@@ -3,6 +3,7 @@
     "title": "Davidson Rafael",
     "description": "Mahasiswa Teknik Informatika di UKRIDA yang selalu <link>bersemangat mempelajari hal baru</link> dan mengubah ide menjadi kode.",
     "projects": "Proyek",
+    "services": "Layanan",
     "contact": "Kontak",
     "about": "Tentang"
   },
@@ -54,6 +55,7 @@
   },
   "Navigation": {
     "projects": "Proyek",
+    "services": "Layanan",
     "contact": "Kontak",
     "about": "Tentang"
   },
@@ -71,5 +73,56 @@
   },
   "LoadingPage": {
     "loading": "Memuat..."
+  },
+  "ServicesPage": {
+    "title": "Harga",
+    "intro": "Solusi terjangkau untuk setiap kebutuhan",
+    "contactBtn": "Pilih Paket",
+    "footerNote": "Semua harga dapat dinegosiasi. Hubungi untuk kebutuhan kustom.",
+    "webApps": {
+      "title": "Web Development",
+      "subtitle": "Website kustom untuk mahasiswa, UMKM, dan bisnis",
+      "badge": "Terpopuler",
+      "priceIDR": "Rp 300rb - 1jt",
+      "priceUSD": "$20 - $70",
+      "features": [
+        "Website Landing Page",
+        "Desain Responsif (Mobile)",
+        "Performa Cepat (Next.js)",
+        "Optimasi SEO",
+        "Konsultasi Gratis",
+        "Support 1 Bulan"
+      ]
+    },
+    "hosting": {
+      "title": "Managed Hosting",
+      "subtitle": "Hosting tanpa ribet dengan manajemen penuh",
+      "badge": "Hemat",
+      "priceIDR": "Rp 30rb",
+      "priceUSD": "$2",
+      "features": [
+        "Gratis Subdomain (*.davidsonrafael.online)",
+        "Mendukung PHP, Next.js, Node.js",
+        "Deployment Otomatis",
+        "Sertifikat SSL Termasuk",
+        "Monitoring Uptime 24/7",
+        "Biaya Setup: Rp 50rb / $4"
+      ]
+    },
+    "automation": {
+      "title": "Otomatisasi",
+      "subtitle": "Skrip kustom untuk menghilangkan tugas berulang",
+      "badge": "Kustom",
+      "priceIDR": "Rp 500rb+",
+      "priceUSD": "$35+",
+      "features": [
+        "Otomatisasi Tugas",
+        "Scraping / Pemrosesan Data",
+        "Integrasi Workflow Kustom",
+        "Source Code Termasuk",
+        "Dokumentasi Disediakan",
+        "1 Revisi Termasuk"
+      ]
+    }
   }
 }

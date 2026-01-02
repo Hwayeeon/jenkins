@@ -9,6 +9,7 @@ export default async function Home() {
   const navigation = [
     { name: t('about'), href: "/about" },
     { name: t('projects'), href: "/projects" },
+    { name: t('services'), href: "/services" },
     { name: t('contact'), href: "/contact" },
   ];
 

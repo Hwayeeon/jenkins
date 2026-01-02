@@ -3,6 +3,7 @@
     "title": "Davidson Rafael",
     "description": "A curious Informatics Engineering student at UKRIDA, always <link>eager to learn something new</link> and transform ideas into code.",
     "projects": "Projects",
+    "services": "Services",
     "contact": "Contact",
     "about": "About"
   },
@@ -54,6 +55,7 @@
   },
   "Navigation": {
     "projects": "Projects",
+    "services": "Services",
     "contact": "Contact",
     "about": "About"
   },
@@ -71,5 +73,56 @@
   },
   "LoadingPage": {
     "loading": "Loading..."
+  },
+  "ServicesPage": {
+    "title": "Pricing",
+    "intro": "Affordable solutions for every need",
+    "contactBtn": "Get Started",
+    "footerNote": "All prices are negotiable. Contact for custom requirements.",
+    "webApps": {
+      "title": "Web Development",
+      "subtitle": "Custom websites for students, UMKM, and businesses",
+      "badge": "Most Popular",
+      "priceIDR": "Rp 500rb - 1jt",
+      "priceUSD": "$29 - $70",
+      "features": [
+        "Website Landing Page",
+        "Responsive Design (Mobile)",
+        "Fast Performance (Next.js)",
+        "SEO Optimization",
+        "Free Consultation",
+        "1 Month Support"
+      ]
+    },
+    "hosting": {
+      "title": "Managed Hosting",
+      "subtitle": "Hassle-free hosting with full management",
+      "badge": "Best Value",
+      "priceIDR": "Rp 30rb",
+      "priceUSD": "$2",
+      "features": [
+        "Free Subdomain (*.davidsonrafael.online)",
+        "Supports PHP, Next.js, Node.js",
+        "Automatic Deployment",
+        "SSL Certificate Included",
+        "24/7 Uptime Monitoring",
+        "Setup Fee: Rp 50K / $4"
+      ]
+    },
+    "automation": {
+      "title": "Automation",
+      "subtitle": "Custom scripts to eliminate repetitive tasks",
+      "badge": "Custom",
+      "priceIDR": "Rp 500rb+",
+      "priceUSD": "$35+",
+      "features": [
+        "Task Automation",
+        "Data Scraping / Processing",
+        "Custom Workflow Integration",
+        "Source Code Included",
+        "Documentation Provided",
+        "1 Revision Included"
+      ]
+    }
   }
 }
