@@ -80,6 +80,23 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Docker Deployment
+
+### Build and Run with Docker Compose
+
+```bash
+docker compose up --build
+```
+
+### Build Standalone Image
+
+```bash
+docker build -t portfolio .
+docker run -p 3000:3000 --env-file .env.local portfolio
+```
+
+> **Note**: Ensure your `.env.local` file contains `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` for Redis functionality.
+
 ## License
 
 MIT License - See [LICENSE](./LICENSE) for details.

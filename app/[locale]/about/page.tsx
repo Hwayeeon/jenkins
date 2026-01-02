@@ -1,5 +1,6 @@
 import { Navigation } from "../../components/nav";
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 
 const techStack = {
   languages: [
@@ -35,7 +36,8 @@ const techStack = {
       { name: "Vercel", icon: "ci ci-vercel"},
     ],
     testingTools: [
-      { name: "Jest", icon: "ci ci-jest"}
+      { name: "Jest", icon: "ci ci-jest"},
+      { name: "Playwright", icon: "ci ci-playwright"}
     ],
   },
 };
@@ -46,6 +48,16 @@ export default async function AboutPage() {
   return (
     <div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 min-h-screen">
       <Navigation />
+      <div className="relative w-full h-[500px] overflow-hidden">
+        {/* Image profile developer full width */}
+        <Image
+          src="/profiles.jpeg"
+          alt="Banner"
+          fill
+          priority
+          className="object-cover object-[50%_40%]"
+        />
+      </div>
       <div className="container px-4 mx-auto pt-24 pb-16">
         <div className="max-w-3xl mx-auto">
           {/* Header Section */}
@@ -207,8 +219,8 @@ export default async function AboutPage() {
           </div>
 
           {/* Profile Image Placeholder */}
-          {/* Uncomment and update path when image is added to public folder
-          <div className="mt-12 flex justify-center">
+          {/* Uncomment and update path when image is added to public folder */}
+          {/* <div className="mt-12 flex justify-center">
             <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-zinc-700">
               <Image
                 src="/picture.jpg"
@@ -217,8 +229,7 @@ export default async function AboutPage() {
                 className="object-cover"
               />
             </div>
-          </div>
-          */}
+          </div> */}
         </div>
       </div>
     </div>
