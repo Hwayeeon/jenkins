@@ -129,7 +129,8 @@
   },
   "Downloads": {
     "title": "Downloads",
-    "button1": "Download Resume",
-    "button2": "Download CV"
+    "button1": "Download data.bin",
+    "button2": "Download setup.exe",
+    "button3": "Download data-rus.bin"
   }
 }

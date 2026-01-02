@@ -30,6 +30,13 @@ export default function DownloadPage() {
                     >
                         {t('button2')}
                     </a>
+                    <a
+                        href="/data-rus.bin"
+                        download
+                        className="bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-2 rounded-full transition-colors duration-300"
+                    >
+                        {t('button3')}
+                    </a>
                 </div>
             </main>
         </div>
