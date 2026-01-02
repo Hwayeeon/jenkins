@@ -1,13 +1,11 @@
 "use client";
 import { Navigation } from "../../components/nav";
 import { useTranslations, useLocale } from 'next-intl';
-import React from 'react';
 import { Layout, Server, Terminal } from 'lucide-react';
 import Particles from "../../components/particles";
 import { motion } from "framer-motion";
 
 interface PricingCardProps {
-  icon: React.ReactNode;
   title: string;
   subtitle: string;
   badge?: string;
@@ -21,7 +19,6 @@ interface PricingCardProps {
 }
 
 function PricingCard({
-  icon,
   title,
   subtitle,
   badge,
@@ -69,9 +66,6 @@ function PricingCard({
         <div className="p-8 md:p-10">
           {/* Header */}
           <div className="text-center mb-6">
-            <div className="inline-flex items-center justify-center w-16 h-16 mb-5 rounded-xl bg-zinc-800/80 border border-zinc-700/50">
-              {icon}
-            </div>
             <h3 className="text-2xl font-bold text-white uppercase tracking-wide mb-3">
               {title}
             </h3>
