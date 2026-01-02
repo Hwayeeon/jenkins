@@ -2,24 +2,24 @@ import "../../global.css";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "../components/analytics"; // Adjusted path
+import { Analytics } from "../components/analytics";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "Davidson Rafael",
+    template: "%s | Davidson Rafael",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Informatics Engineering Student at UKRIDA | Web Developer",
   openGraph: {
-    title: "chronark.com",
-    description: "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    title: "Davidson Rafael",
+    description: "Informatics Engineering Student at UKRIDA | Web Developer",
+    url: "https://davidsonrafael.online",
+    siteName: "Davidson Rafael",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://davidsonrafael.online/og.png",
         width: 1920,
         height: 1080,
       },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Davidson Rafael",
     card: "summary_large_image",
   },
   icons: {
