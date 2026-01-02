@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, FormEvent, KeyboardEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { X, Send } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 interface Message {
@@ -147,7 +148,7 @@ export function AIAssistant() {
                 onClick={() => setIsOpen(false)}
                 className="px-3 py-1 text-sm text-zinc-400 hover:text-white hover:bg-zinc-700 rounded transition-colors"
               >
-                Tutup
+                <X className="w-4 h-4" />
               </button>
             </div>
 
@@ -258,7 +259,7 @@ export function AIAssistant() {
                   disabled={!input.trim() || isLoading}
                   className="px-4 py-2.5 bg-blue-600 rounded-lg text-white text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors"
                 >
-                  Kirim
+                  <Send className="w-4 h-6" />
                 </button>
               </div>
             </form>
