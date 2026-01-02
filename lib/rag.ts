@@ -157,8 +157,8 @@ Contact Davidson for quotes and consultations.`,
     content: `Contact Davidson Rafael
 
 For inquiries about projects, services, or collaborations, you can reach Davidson through:
-- Email: Available on the contact page
-- GitHub: Check out his repositories and open source work
+- Email: davidsonrafael20@gmail.com
+- GitHub: Hwayeeon
 - Social media links available on the website
 
 Feel free to reach out for web development projects, consultations, or just to say hello!`,
