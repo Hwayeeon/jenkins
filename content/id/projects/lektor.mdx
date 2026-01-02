@@ -1,100 +1,113 @@
 ---
 title: Lektor
-description: Platform penggalangan dana berbasis web yang mendigitalisasi pemesanan makanan, mengotomatiskan pelacakan penjualan melalui Google Sheets, dan meningkatkan keuntungan hingga 30%+ melalui peningkatan konversi dan efisiensi operasional.
-descriptionDev: Aplikasi web full-stack yang dibangun dengan teknologi modern, menampilkan integrasi Google Sheets real-time, UI responsif, dan sistem manajemen pesanan otomatis.
+description: Platform penggalangan dana berbasis web yang mendigitalkan pemesanan makanan, mengotomatisasi pelacakan penjualan melalui Google Sheets, dan meningkatkan keuntungan hingga 30%+ melalui peningkatan konversi dan efisiensi operasional.
+descriptionDev: Aplikasi web full-stack yang dibangun dengan teknologi modern, dilengkapi dengan integrasi Google Sheets secara real-time, antarmuka pengguna responsif, dan sistem manajemen pesanan otomatis.
 date: "2026-01-01"
-url: https://lektor.davidsonrafael.com
+url: https://lektor.davidsonrafael.online
 published: true
 repository: Hwayeeon/lektor
 ---
 
 ## Tampilan Bisnis
 
-### Ikhtisar Proyek
-Lektor adalah platform web yang saya bangun untuk mendigitalisasi penggalangan dana komunitas dengan mengubah alur pemesanan manual menjadi ekosistem pemesanan online yang mulus dan otomatis. Proyek ini dirancang untuk membantu komunitas gereja dan penjual makanan skala kecil menghasilkan pendapatan secara lebih efisien dengan menghubungkan penjual langsung dengan pengunjung lokal yang dapat memesan secara online.
+### Ringkasan Proyek
+Lektor adalah platform web yang dirancang untuk memodernisasi penggalangan dana komunitas dengan mengubah alur kerja pemesanan manual menjadi pengalaman online yang lancar. Platform ini memungkinkan komunitas gereja dan penjual makanan skala kecil untuk menjual produk secara digital sambil melacak penjualan secara otomatis, sehingga penggalangan dana menjadi lebih cepat, akurat, dan menguntungkan.
 
 ### Tantangan
-Sebelum Lektor, pesanan penggalangan dana dilakukan secara manual — melalui telepon atau tatap muka — yang menyebabkan:
+Sebelum Lektor:
 
-- Memakan waktu dan rentan terjadi kesalahan
-- Sulit untuk melacak atau mengelola pesanan
-- Limitasi jangkauan pelanggan dan visibilitas
+- Pesanan dikelola secara manual melalui telepon atau tatap muka.
+- Pelacakan pembayaran dan pesanan rentan kesalahan dan lambat.
+- Jangkauan dan visibilitas pelanggan terbatas.
 
-Masalah utama adalah _bagaimana mengubah alur offline yang tidak terorganisir menjadi pengalaman online yang terpercaya dan skalabel tanpa infrastruktur yang rumit_.
+Masalah utama: bagaimana menciptakan sistem pemesanan online yang skalabel dan terpercaya tanpa infrastruktur yang rumit.
 
-### Solusi Saya
-Saya merancang dan membangun platform pemesanan web ringan di mana:
-- Penjual mengunggah _daftar produk_ dengan harga dan gambar
-- Pengunjung _dapat menelusuri dan memesan secara instan_ dalam alur yang mudah digunakan
-- Pesanan otomatis sinkron ke Google Sheets, mengumpulkan:
-  - Nama pelanggan
-  - Nomor telepon
-  - Item yang dipilih
+### Solusi
+Saya membangun platform web ringan dan intuitif di mana:
+
+- Penjual mengunggah daftar produk beserta gambar dan harga.
+- Pelanggan dapat menjelajahi barang, menambahkannya ke keranjang belanja, dan melakukan checkout tanpa perlu membuat akun.
+- Pesanan secara otomatis dikirim ke Google Sheets untuk pelacakan real-time:
+  - Nama dan nomor telepon pelanggan
+  - Barang yang dipilih dan jumlahnya
   - Total penjualan
+  - Status pembayaran
 
-Pengaturan ini menghapus pekerjaan masukan manual sementara mempertahankan data yang terpusat dan dapat diekspor.
+Pengaturan ini menghilangkan entri manual sambil menjaga semua data terpusat dan dapat diekspor.
 
 ### Dampak & Hasil
-Proyek ini bukan hanya peningkatan fungsi — ia menciptakan nilai bisnis yang dapat diukur:
 
-- **Kinerja penjualan meningkat signifikan**
-- Komunitas melihat **peningkatan pendapatan hingga 30%+** setelah menerapkan Lektor
-- Efisiensi proses meningkat dengan pelacakan otomatis dan pengurangan kesalahan
+- Pendapatan meningkat lebih dari 30% untuk komunitas yang menggunakan Lektor.
+- Penggalangan dana menjadi lebih efisien dengan pelacakan otomatis dan pengurangan kesalahan.
+- Baik pihak yang bertanggung jawab (PIC) maupun pembeli menemukan sistem ini mudah dan nyaman.
 
-Lektor membuktikan bagaimana otomatisasi web yang berpikir matang dapat mengubah upaya penggalangan dana lokal menjadi saluran pendapatan yang skalabel.
+> Ringkasan: Lektor menunjukkan bagaimana aplikasi web kecil namun dirancang dengan baik dapat mengubah penggalangan dana offline menjadi sistem yang skalabel, otomatis, dan menguntungkan, memudahkan hidup bagi penjual dan pembeli.
 
 ---
 
 ## Tampilan Developer
 
-### Ikhtisar Teknis
-Lektor adalah aplikasi web full-stack yang mendemonstrasikan praktik pengembangan web modern, mengintegrasikan berbagai teknologi untuk menciptakan solusi e-commerce lengkap untuk penggalangan dana.
+### Ringkasan Teknis
+Lektor adalah aplikasi web full-stack yang dibangun dengan teknologi modern, menunjukkan praktik pengembangan web yang skalabel, dapat dipelihara, dan berperforma tinggi.
 
-### Arsitektur & Tech Stack
-- **Frontend**: Next.js dengan React untuk server-side rendering dan performa optimal
-- **Styling**: Tailwind CSS untuk desain responsif mobile-first
-- **Backend**: API routes untuk pemrosesan dan validasi pesanan
-- **Database/Storage**: Integrasi Google Sheets API untuk sinkronisasi data real-time
-- **Deployment**: Vercel untuk CI/CD otomatis dan distribusi edge network
+### Arsitektur & Stack Teknologi
+- Frontend: Next.js (React) untuk rendering sisi server dan antarmuka responsif
+- Gaya: Tailwind CSS untuk desain berorientasi mobile
+- Backend: Rute API untuk validasi dan pemrosesan pesanan
+- Penyimpanan Data: Google Sheets API v4 untuk pelacakan pesanan secara real-time
+- Deployment: Vercel untuk CI/CD dan jaringan tepi global
 
 ### Tantangan Teknis Utama
 
 #### 1. Integrasi Google Sheets
-Mengimplementasikan OAuth 2.0 authentication flow dan Google Sheets API v4 untuk:
-- Sinkronisasi pesanan real-time tanpa infrastruktur database
-- Validasi dan formatting data otomatis
-- Error handling untuk API rate limits dan network failures
+- Menerapkan alur otentikasi OAuth 2.0 dan Sheets API v4
+- Memungkinkan sinkronisasi pesanan real-time tanpa database tradisional
+- Menambahkan validasi data otomatis, pemformatan, dan penanganan kesalahan
 
 #### 2. Sistem Manajemen Pesanan
-Membangun pipeline pemrosesan pesanan yang robust:
-- Validasi form client-side dengan Zod schemas
-- Sanitasi dan verifikasi data server-side
-- Behavior mirip transaction untuk memastikan konsistensi data
-- Generasi timestamp dan order ID otomatis
+- Validasi formulir sisi klien dengan skema Zod
+- Sanitasi dan verifikasi data sisi server
+- Pembuatan ID pesanan unik dan cap waktu
+- Memastikan perilaku transaksi untuk konsistensi
 
-#### 3. Optimasi Performa
-- Optimasi gambar menggunakan Next.js Image component
-- Lazy loading untuk katalog produk
-- Debounced search dan filtering
-- Client-side caching untuk UX yang lebih baik
+#### 3. Optimasi Kinerja
+- Optimasi gambar dengan komponen Image Next.js
+- Pemuatan lambat katalog produk
+- Pencarian dan penyaringan yang di-debounce
+- Caching sisi klien untuk pengalaman pengguna yang lebih cepat
 
 #### 4. Desain Responsif
-Mencapai interface mobile-first yang fully responsive:
-- Sistem breakpoint untuk berbagai ukuran layar
-- Kontrol yang dioptimasi untuk perangkat sentuh
-- Strategi progressive enhancement
+- Tata letak mobile-first dan kontrol ramah sentuhan
+- Titik pemecahan untuk berbagai ukuran layar
+- Peningkatan progresif untuk browser lama
 
-### Kualitas Kode & Best Practices
-- TypeScript untuk type safety di seluruh codebase
-- Arsitektur berbasis komponen untuk reusability
-- Custom hooks untuk logic yang dibagikan
-- Manajemen environment variable untuk konfigurasi
-- Error boundaries untuk penanganan failure yang graceful
+#### 5. Kualitas Kode & Praktik Terbaik
+- TypeScript untuk keamanan tipe
+- Arsitektur berbasis komponen dengan komponen UI yang dapat digunakan ulang
+- Hook kustom untuk logika bersama
+- Variabel lingkungan untuk konfigurasi
+- Batas kesalahan untuk penanganan kegagalan yang elegan
 
 ### Pertimbangan Skalabilitas
-Meskipun Google Sheets berfungsi sebagai data layer untuk MVP, arsitektur dirancang dengan modularitas:
-- Abstracted data access layer untuk migrasi mudah ke database tradisional
-- Desain API-first memungkinkan integrasi aplikasi mobile di masa depan
-- Desain server stateless untuk horizontal scaling
+- Lapisan data modular untuk migrasi mudah ke database tradisional
+- Desain berbasis API memungkinkan integrasi aplikasi seluler di masa depan
+- Desain server stateless untuk skalabilitas horizontal
 
-Proyek ini menunjukkan tidak hanya kemampuan untuk mengirimkan fitur, tetapi untuk merancang solusi yang maintainable dan scalable sambil menyeimbangkan kendala teknis dengan kebutuhan bisnis.
+### Alur Pengguna
+- Pengguna mengunjungi situs web
+- Tidak memerlukan login
+- Pilih item → Tambahkan ke keranjang → Checkout
+- Pesan otomatis ke PIC
+- Pesanan tercatat di Google Sheets → Transaksi selesai
+
+| Column            | Description                |
+| ----------------- | -------------------------- |
+| nomor             | Serial number              |
+| id_pembelian      | Unique order ID            |
+| nama pembeli      | Customer name              |
+| nomor telepon     | Phone number               |
+| order item full   | Full list of ordered items |
+| total order item  | Total amount               |
+| status pembayaran | Payment status             |
+
+> Ringkasan: Lektor menunjukkan bagaimana aplikasi web kecil namun dirancang dengan baik dapat mengubah penggalangan dana offline menjadi sistem yang skalabel, otomatis, dan menguntungkan, memudahkan hidup bagi penjual dan pembeli.

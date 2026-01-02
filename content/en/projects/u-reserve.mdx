@@ -1,0 +1,97 @@
+---
+title: U-Reserve
+description: A web-based campus room reservation platform that digitizes approval workflows, enables real-time availability checking, and provides faster responses through a centralized system.
+descriptionDev: Full-stack web application built with Next.js, Shadcn UI, Tailwind CSS, and Supabase, featuring SVG-based interactive room selection and role-based approval workflow.
+date: "2026-01-02"
+url: https://u-reserve.davidsonrafael.online
+published: true
+repository: Hwayeeon/u-reserve
+---
+
+## Business View
+
+### Project Overview
+U-Reserve is a web platform designed to simplify the process of reserving rooms on campus. This platform replaces the old, manual process with an interactive and efficient system, allowing students to book rooms easily and receive quick approval or rejection from the responsible staff.
+
+### The Challenge
+Before U-Reserve:
+
+- Room reservations were handled manually through soft copy documents.
+- The approval process was slow, requiring several layers of approval from different departments.
+- Students often had to wait a long time to get confirmation about their reservation status.
+
+Main Problem: How to simplify and speed up the room reservation process without losing control or oversight from the responsible parties.
+
+### The Solution
+U-Reserve offers a web-based solution where:
+
+- Students can view and select available rooms based on time and reason for booking.
+- Interactive SVG images of rooms allow students to pick their desired room easily.
+- Reservations are automatically forwarded to the staff responsible, who can approve or reject the request based on the student’s provided reason.
+- Students get immediate feedback from the responsible staff without having to wait for long periods.
+
+### Impact & Results
+
+- Room reservation process became faster and more transparent.
+- Students receive quick responses regarding their reservation status.
+- Reduced time spent by staff on manual handling of reservation requests.
+
+> Summary: U-Reserve provides a fast, efficient, and transparent platform for room reservations, making it easier for both students and campus staff.
+
+---
+
+## Developer View
+
+### Technical Overview
+U-Reserve is a full-stack web application built using Next.js, Shadcn, Tailwind CSS, and Supabase. The platform features interactive room selection via SVG and real-time integration with the database to manage reservations.
+
+### Architecture & Tech Stack
+- Frontend: Next.js (React) for server-side rendering and interactive UI components.
+- Styling: Tailwind CSS for responsive, mobile-first design.
+- Backend: API routes in Next.js to handle validation and data processing.
+- Data Storage: Supabase as the real-time backend database to store room reservation data.
+- SVG: Used for interactive room maps to allow easy room selection.
+- Deployment: Vercel for continuous integration and deployment, hosting on their global edge network.
+
+### Key Technical Challenges
+
+#### 1. SVG-based Interactive Room Selection
+- Developed an SVG-based interactive room map to enable students to select rooms based on their availability.
+- Implemented validation to ensure rooms are available during the selected time slots.
+
+#### 2. Real-Time Booking System
+- Integrated Supabase to handle real-time updates of room reservation statuses.
+- Ensured that each booking is instantly reflected in the system for quick review and approval by staff.
+
+#### 3. Staff Approval Workflow
+- Created a system where staff members can review the reasons for room reservations and approve or reject them.
+- Ensured a smooth process for staff to respond quickly to student requests.
+
+#### 4. Performance Optimization
+- Optimized front-end performance using lazy-loading and debouncing to speed up room selection.
+- Applied client-side caching to reduce latency and improve the user experience.
+
+#### 5. Responsive Design
+- Built a mobile-first design using Tailwind CSS, ensuring a seamless experience across different devices.
+- Implemented progressive enhancements for older browsers to ensure compatibility.
+
+### Scalability Considerations
+- Modular database design with Supabase allows easy expansion to include more features in the future.
+- API-first approach supports potential mobile app integrations.
+- Stateless server architecture ensures scalability for high traffic loads.
+
+### User flow
+- User Visits Website
+    - Students visit the U-Reserve website and view available rooms.
+- Login
+    - Student log in using their student ID and password.
+- Select Room and Time
+    - Students select a room and pick a time slot based on availability.
+- Submit Reason for Reservation
+    - Students provide a reason for the reservation, which will be evaluated by the staff.
+- Staff Review
+    - Staff review the student’s request and either approve or reject the reservation.
+- Confirmation
+    - Students receive an immediate response (approval or rejection) from the responsible staff.
+
+> Summary: U-Reserve is an interactive, web-based platform that streamlines and speeds up the room reservation process on campus, ensuring quick feedback and efficient management for both students and staff.

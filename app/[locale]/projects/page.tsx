@@ -56,8 +56,8 @@ export default async function ProjectsPage({ params }: Props) {
   }
 
   const featured = allProjects.find((project) => project.slug === "lektor")!;
-  const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-  const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+  const top2 = allProjects.find((project) => project.slug === "u-reserve")!;
+  const top3 = allProjects.find((project) => project.slug === "davidsonrafael")!;
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(

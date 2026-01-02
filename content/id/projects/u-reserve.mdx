@@ -1,0 +1,97 @@
+---
+title: U-Reserve
+description: Platform pemesanan ruang kampus berbasis web yang mendigitalkan alur kerja persetujuan, memungkinkan pengecekan ketersediaan secara real-time, dan memberikan respons lebih cepat melalui sistem terpusat.
+descriptionDev: Aplikasi web full-stack yang dibangun dengan Next.js, Shadcn UI, Tailwind CSS, dan Supabase, dilengkapi dengan pemilihan ruang interaktif berbasis SVG dan alur kerja persetujuan berdasarkan peran
+date: "2026-01-02"
+url: https://u-reserve.davidsonrafael.online
+published: true
+repository: Hwayeeon/u-reserve
+---
+
+## Tampilan Bisnis
+
+### Ringkasan Proyek
+U-Reserve adalah platform web yang dirancang untuk menyederhanakan proses pemesanan ruangan di kampus. Platform ini menggantikan proses manual lama dengan sistem interaktif dan efisien, memungkinkan mahasiswa memesan ruangan dengan mudah dan menerima persetujuan atau penolakan cepat dari staf yang bertanggung jawab.
+
+### Tantangan
+Sebelum U-Reserve:
+
+- Pemesanan ruangan ditangani secara manual melalui dokumen soft copy.
+- Proses persetujuan lambat, memerlukan beberapa lapisan persetujuan dari berbagai departemen.
+- Mahasiswa sering harus menunggu lama untuk mendapatkan konfirmasi status pemesanan mereka.
+
+Masalah Utama: Bagaimana menyederhanakan dan mempercepat proses pemesanan ruangan tanpa kehilangan kontrol atau pengawasan dari pihak yang bertanggung jawab.
+
+### Solusi
+U-Reserve menawarkan solusi berbasis web di mana:
+
+- Mahasiswa dapat melihat dan memilih ruangan yang tersedia berdasarkan waktu dan alasan pemesanan.
+- Gambar SVG interaktif ruangan memungkinkan mahasiswa memilih ruangan yang diinginkan dengan mudah.
+- Pemesanan secara otomatis diteruskan ke staf yang bertanggung jawab, yang dapat menyetujui atau menolak permintaan berdasarkan alasan yang diberikan oleh mahasiswa.
+- Mahasiswa mendapatkan umpan balik langsung dari staf yang bertanggung jawab tanpa harus menunggu lama.
+
+### Dampak & Hasil
+
+- Proses pemesanan ruangan menjadi lebih cepat dan transparan.
+- Mahasiswa menerima tanggapan cepat mengenai status pemesanan mereka.
+- Waktu yang dihabiskan oleh staf untuk menangani permintaan pemesanan secara manual berkurang.
+
+> Ringkasan: U-Reserve menyediakan platform cepat, efisien, dan transparan untuk pemesanan ruangan, memudahkan baik mahasiswa maupun staf kampus. 
+
+---
+
+## Tampilan Developer
+
+### Ringkasan Teknis
+U-Reserve adalah aplikasi web full-stack yang dibangun menggunakan Next.js, Shadcn, Tailwind CSS, dan Supabase. Platform ini dilengkapi dengan pemilihan ruangan interaktif melalui SVG dan integrasi real-time dengan database untuk mengelola reservasi.
+
+### Arsitektur & Stack Teknologi
+- Frontend: Next.js (React) untuk rendering sisi server dan komponen antarmuka pengguna interaktif.
+- Gaya: Tailwind CSS untuk desain responsif dan berorientasi mobile.
+- Backend: Rute API di Next.js untuk menangani validasi dan pemrosesan data.
+- Penyimpanan Data: Supabase sebagai basis data backend real-time untuk menyimpan data reservasi ruangan.
+- SVG: Digunakan untuk peta ruangan interaktif agar pemilihan ruangan menjadi mudah.
+- Deployment: Vercel untuk integrasi dan deployment berkelanjutan, dengan hosting di jaringan edge global mereka.
+
+### Tantangan Teknis Utama
+
+#### 1. Pemilihan Ruang Interaktif Berbasis SVG
+- Mengembangkan peta ruang interaktif berbasis SVG untuk memungkinkan mahasiswa memilih ruang berdasarkan ketersediaannya.
+- Menerapkan validasi untuk memastikan ruang tersedia selama slot waktu yang dipilih.
+
+#### 2. Sistem Pemesanan Real-Time
+- Mengintegrasikan Supabase untuk menangani pembaruan real-time status pemesanan ruang.
+- Memastikan setiap pemesanan langsung tercermin di sistem untuk tinjauan dan persetujuan cepat oleh staf.
+
+#### 3. Alur Kerja Persetujuan Staf
+- Membuat sistem di mana staf dapat meninjau alasan pemesanan ruangan dan menyetujui atau menolaknya.
+- Memastikan proses yang lancar bagi staf untuk merespons permintaan mahasiswa dengan cepat.
+
+#### 4. Optimasi Kinerja
+- Mengoptimalkan kinerja front-end menggunakan lazy-loading dan debouncing untuk mempercepat pemilihan ruangan.
+- Menerapkan caching sisi klien untuk mengurangi latensi dan meningkatkan pengalaman pengguna.
+
+#### 5. Desain Responsif
+- Membangun desain mobile-first menggunakan Tailwind CSS, memastikan pengalaman yang mulus di berbagai perangkat.
+- Menerapkan peningkatan progresif untuk browser lama untuk memastikan kompatibilitas.
+
+### Pertimbangan Skalabilitas
+- Desain database modular dengan Supabase memungkinkan perluasan mudah untuk menambahkan fitur tambahan di masa depan.
+- Pendekatan API-first mendukung integrasi aplikasi seluler potensial.
+- Arsitektur server stateless memastikan skalabilitas untuk beban lalu lintas tinggi.
+
+### Alur Pengguna
+- Pengguna Mengunjungi Situs Web
+    - Mahasiswa mengunjungi situs web U-Reserve dan melihat ruang yang tersedia.
+- Masuk
+    - Siswa masuk menggunakan ID siswa dan kata sandi mereka.
+- Pilih Ruang dan Waktu
+    - Siswa memilih ruang dan memilih slot waktu berdasarkan ketersediaan.
+- Kirim Alasan Pemesanan
+    - Siswa memberikan alasan pemesanan, yang akan dievaluasi oleh staf.
+- Peninjauan Staf
+    - Staf meninjau permintaan mahasiswa dan menyetujui atau menolak pemesanan.
+- Konfirmasi
+    - Mahasiswa menerima tanggapan segera (persetujuan atau penolakan) dari staf yang bertanggung jawab.
+
+> Ringkasan: U-Reserve adalah platform web interaktif yang mempermudah dan mempercepat proses pemesanan ruangan di kampus, memastikan umpan balik cepat dan pengelolaan efisien bagi mahasiswa dan staf.
