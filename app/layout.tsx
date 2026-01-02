@@ -53,6 +53,7 @@ const calSans = localFont({
   src: "../public/fonts/CalSans-SemiBold.ttf",
   variable: "--font-calsans",
 });
+import { AIAssistant } from "./components/ai-assistant";
 
 export default function RootLayout({
   children,
@@ -73,6 +74,7 @@ export default function RootLayout({
         }`}
       >
         {children}
+        <AIAssistant />
       </body>
     </html>
   );
