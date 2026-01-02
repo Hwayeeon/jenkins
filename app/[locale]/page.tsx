@@ -11,6 +11,7 @@ export default async function Home() {
     { name: t('projects'), href: "/projects" },
     { name: t('services'), href: "/services" },
     { name: t('contact'), href: "/contact" },
+    { name: t('downloads'), href: "/downloads" },
   ];
 
   return (

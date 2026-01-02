@@ -57,6 +57,12 @@ export const Navigation: React.FC = () => {
 						>
 							{t('contact')}
 						</Link>
+						<Link
+							href="/downloads"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							{t('downloads')}
+						</Link>
 						{/* Language Switcher */}
 						<Link
 							href={`/${otherLocale}`}

@@ -5,7 +5,8 @@
     "projects": "Proyek",
     "services": "Layanan",
     "contact": "Kontak",
-    "about": "Tentang"
+    "about": "Tentang",
+    "downloads": "Downloads"
   },
   "ContactPage": {
     "instagram": "Ikuti saya di Instagram",
@@ -57,7 +58,8 @@
     "projects": "Proyek",
     "services": "Layanan",
     "contact": "Kontak",
-    "about": "Tentang"
+    "about": "Tentang",
+    "downloads": "Downloads"
   },
   "NotFoundPage": {
     "description": "Halaman yang Anda cari tidak ditemukan atau telah dipindahkan.",
@@ -124,5 +126,10 @@
         "1 Revisi Termasuk"
       ]
     }
+  },
+  "Downloads": {
+    "title": "Downloads",
+    "button1": "Download Resume",
+    "button2": "Download CV"
   }
 }
