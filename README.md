@@ -1,79 +1,84 @@
-<div align="center">
-    <h1 align="center">Personal Portfolio</h1>
+# Personal Portfolio
 
-A personal portfolio website built with [Next.js 16](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Upstash](https://upstash.com), and deployed to [Vercel](https://vercel.com/).
+A modern, high-performance personal portfolio and blog built with Next.js 16, React 19, and Tailwind CSS. This project focuses on developer experience, internationalization, and privacy-focused analytics.
 
-</div>
+## Key Features
 
-<br/>
+- **Next.js 16 & React 19**: Leveraging the latest App Router foundation and React Server Components for optimal performance.
+- **Internationalization (i18n)**: Native support for English (`en`) and Indonesian (`id`) locales using `next-intl`, featuring automatic locale detection and organized message dictionaries.
+- **Dual-Perspective MDX**: Custom MDX processing engine that supports unique "Business" and "Developer" content toggles within a single article, allowing for tailored reading experiences.
+- **Advanced MDX**: Remote MDX rendering powered by `next-mdx-remote`, enabling dynamic content loading with server-side syntax highlighting via `shiki` and `rehype-pretty-code`.
+- **Privacy-First Analytics**: Integrated Beam Analytics for tracking page views and visitor metrics without compromising user privacy.
+- **Page View Counters**: Real-time page view tracking using Upstash Redis.
+- **Dynamic Animations**: Smooth, polished interactions and page transitions powered by Framer Motion.
 
-## Features
+## Tech Stack
 
-- ⚡ **Next.js 16** with App Router and React 19
-- 🌐 **Internationalization (i18n)** using [next-intl](https://next-intl-docs.vercel.app/) with English and Indonesian locales
-- 📝 **MDX Support** via [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote) for blog and project content
-- 🎨 **Syntax Highlighting** with [Shiki](https://shiki.matsu.io/) and [rehype-pretty-code](https://rehype-pretty-code.netlify.app/)
-- 📊 **Page View Counter** powered by [Upstash Redis](https://upstash.com)
-- 🎭 **Animations** using [Framer Motion](https://www.framer.com/motion/)
-- 💅 **Styling** with [Tailwind CSS](https://tailwindcss.com/)
-
-## Running Locally
-
-Clone the repository:
-
-```sh-session
-git clone <your-repo-url>
-cd chronark.com
-```
-
-Create a `.env.local` file with the following environment variables:
-
-```env
-# Get your free Redis database from https://console.upstash.com/
-UPSTASH_REDIS_REST_URL=your_upstash_redis_rest_url_here
-UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_rest_token_here
-```
-
-Then install dependencies and run the development server:
-
-```sh-session
-pnpm install
-pnpm dev
-```
+| Category | Technology | Description |
+|----------|------------|-------------|
+| **Core** | Next.js 16 | App Router, Server Components |
+| **Language** | TypeScript | Static typing and type safety |
+| **Styling** | Tailwind CSS | Utility-first CSS framework |
+| **Animations** | Framer Motion | Production-ready animation library |
+| **Data** | Upstash Redis | Serverless Redis for real-time data |
+| **Content** | MDX | Markdown with strict Frontmatter validation |
+| **i18n** | next-intl | Internationalization framework |
+| **Highlighting** | Shiki | High-fidelity syntax highlighting |
 
 ## Project Structure
 
 ```
 ├── app/
-│   └── [locale]/          # Internationalized routes
+│   └── [locale]/          # Internationalized routes and pages
 ├── content/
-│   ├── en/                # English MDX content (blog posts, projects)
-│   └── id/                # Indonesian MDX content
-├── i18n/                  # i18n configuration
+│   ├── en/                # English content (projects/posts)
+│   └── id/                # Indonesian content (projects/posts)
+├── i18n/                  # Localization configuration
+├── lib/                   # Core utilities (MDX engine, Redis client)
 ├── messages/
-│   ├── en.json            # English translations
-│   └── id.json            # Indonesian translations
-├── lib/                   # Utility functions
-└── public/                # Static assets
+│   ├── en.json            # English translation keys
+│   └── id.json            # Indonesian translation keys
+├── public/                # Static assets (fonts, images)
+└── types/                 # TypeScript type definitions
 ```
 
-## Tech Stack
+## Getting Started
 
-| Category | Technology |
-|----------|------------|
-| Framework | Next.js 16 |
-| UI Library | React 19 |
-| Styling | Tailwind CSS |
-| i18n | next-intl |
-| MDX | next-mdx-remote |
-| Syntax Highlighting | Shiki + rehype-pretty-code |
-| Database | Upstash Redis |
-| Animations | Framer Motion |
-| Deployment | Vercel |
+### Prerequisites
 
-## Credits
+- Node.js (Latest LTS recommended)
+- pnpm (Package manager)
 
-Originally forked from [chronark/chronark.com](https://github.com/chronark/chronark.com).
+### Environment Setup
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```bash
+# Redis Database (Upstash)
+UPSTASH_REDIS_REST_URL=your_upstash_url
+UPSTASH_REDIS_REST_TOKEN=your_upstash_token
+
+# Analytics (Beam)
+NEXT_PUBLIC_BEAM_TOKEN=your_beam_token
+```
+
+### Installation
+
+Install dependencies:
+
+```bash
+pnpm install
+```
+
+### Development
+
+Start the development server:
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## License
 
